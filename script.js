@@ -1,7 +1,18 @@
-  function toggleMenu() {
+  // lista del nav
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      parent.classList.toggle('open');
+    });
+  });
+});
+
+function toggleMenu() {
     const menu = document.getElementById('navLinks');
     menu.classList.toggle('active');
-  }
+}
 
   const modal = document.getElementById("modalForm");
   const btn = document.querySelector(".btn2");
@@ -11,11 +22,11 @@
     modal.classList.add("active");
   });
 
-  function closeModal() {
+function closeModal() {
     modal.classList.remove("active");
-  }
+}
 
-  form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const formData = {
@@ -36,16 +47,4 @@
     alert("Datos guardados. Se descargó el archivo.");
     form.reset();
     closeModal();
-  });
-
-  // lista del nav
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      const parent = this.parentElement;
-      parent.classList.toggle('open');
-    });
-  });
 });
-

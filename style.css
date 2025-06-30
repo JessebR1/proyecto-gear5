@@ -15,6 +15,7 @@ body {
 }
 main{
     max-width: 1200px;
+    width: 100%;
 }
 
 .wrapper {
@@ -74,6 +75,14 @@ button {
   margin-left: 0.5em;
   border: 1px solid #fff;
 }
+.btn.login:hover{
+  background: linear-gradient(to right, #3f80ff, #0b0ec0);
+  border: rgb(21, 7, 216) 1px solid;
+}
+.btn.register:hover{
+  background: linear-gradient(to right, #3f80ff, #0b0ec0);
+  border: rgb(21, 7, 216) 1px solid;
+}
 
 /*  navbar  */
 .navbar-container {
@@ -108,7 +117,7 @@ button {
   content: url('/imgs/logo1.svg');
 }
 
-/* Contenido centrado dentro del navbar-container */
+/* centrado dentro del navbar */
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
@@ -148,7 +157,7 @@ button {
 
 .nav-links a{
     text-decoration: none;
-    color: white;
+    color: rgb(223, 223, 223);
     font-weight: 500;
     
 }
@@ -171,7 +180,7 @@ button {
   background-color: #142c4d;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  position: static; /* permite que funcione en mobile */
+  position: static;
   margin-top: 0.5rem;
   list-style: none;
   gap: 0.5rem;
@@ -185,7 +194,7 @@ button {
 }
 
 .nav-links .dropdown-toggle::after {
-  content: "▼";
+  content: url('imgs/arrow.svg');
   font-size: 0.6rem;
   margin-left: 0.5rem;
   transition: transform 0.2s ease;
@@ -208,13 +217,55 @@ button {
   color: #ffffff;
 }
 
+/* media queri para el body*/
+@media (max-width: 768px) {
+.hero{
+  width: 100%; 
+  max-width: 300px;
+  display: block;
+  }
+  .hero-content{
+    height: 500px;
+  }
+
+.pres-panel{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: auto;
+}
+main{
+  max-width: 768px;
+  width: 100%;
+}
+presentacion-imagen{
+  width: 300px;
+}
+.presentacion-imagen img{
+  width: 80%; 
+  max-width: 300px;
+  margin: 0 auto; 
+  display: block;
+}
+.section-3tarjetas{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+}
 
 @media screen and (min-width: 769px) {
   .navbar {
     flex-wrap: nowrap;
+    width: auto;
+    height: auto;
   }
 
-  .nav-links {
+.nav-links {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -258,7 +309,6 @@ button {
 }
 
 
-/*  Hero  */
 .hero {
   position: relative;
   padding: 5em 2em;
@@ -272,8 +322,10 @@ button {
   display: flex;
   align-items: center;
   margin-top: 50px;
-   -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 80%, transparent);
   mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  width: 1200px;
 }
 
 .hero-content {
@@ -295,7 +347,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* opcional: oscurecer fondo para mejor legibilidad */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
@@ -315,26 +367,32 @@ button {
 }
 
 /* PRESENTACION 
-  background: linear-gradient(to bottom, #000000, #0d1629); */
+  anterior background: linear-gradient(to bottom, #000000, #0d1629); */
 .presentacion {
   padding: 4em 2em 10px;
   padding-top: 0;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* espacio entre tarjetas */
   background: linear-gradient(
     to bottom,
     transparent 9%,
-    #0d1629 100%,
+    #091428 70%,
     transparent 100%
+    
   );
 }
 
-
 .mini-presentacion {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   gap: 2em;
   padding: 2em;
   flex-wrap: wrap;
-  
+}
+.pres-panel{
+  margin: auto;
 }
 .tarjeta-pres {
   width: 225px;
@@ -350,6 +408,7 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: rgb(218, 218, 218);
   border:2px solid rgb(184, 184, 184);
+  
 }
 
 .tarjeta-pres:hover {
@@ -364,14 +423,17 @@ button {
 }
 
 .presentacion-imagen{
-    text-align: center;
     border-radius: 10px;
     margin-bottom: 25px;
+    margin: auto;
 }
 .presentacion-imagen img{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     border: 3px solid rgb(136, 136, 136);
+      width: 100%; /* por defecto ocupa todo el ancho del contenedor */
+  max-width: 1000px; /* para pantallas grandes */
+  height: auto;
 }
 
 /*  Marcas  */
@@ -465,7 +527,7 @@ button {
 /*  Espacio React  */
 .espacio-react {
   padding: 4em 2em;
-  background: #1e293b;
+  background: #111b2b;
 }
 
 /*  Tarjetas Grandes  */
@@ -588,8 +650,11 @@ button {
 /* 3 tarjetas grandes */
 .section-3tarjetas {
   margin: 0 auto;
-  padding: 4em 1em;
-  height: 650px;
+  padding: 60px 0px 50px 0px;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card-container-3tarjetas {
@@ -602,7 +667,7 @@ button {
 }
 
 .card {
-  background: linear-gradient(145deg, #0a1255, #1e173c);
+  background: linear-gradient(145deg, #0a1255, #0c369167);
   border-radius: 16px;
   padding: 2em;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -610,6 +675,7 @@ button {
 
 .card.largo {
   grid-column: span 1;
+  height: 320px;
 }
 
 .card.pequeño {
@@ -631,7 +697,7 @@ button {
 }
 
 .btn-3tarjetas {
-  background: linear-gradient(to right, #3f80ff, #0b0ec0);
+  background: linear-gradient(to right, #3f80ff, #2a2b83);
   border: none;
   padding: 0.75em 1.5em;
   border-radius: 8px;
@@ -756,7 +822,6 @@ footer {
     align-items: center;
   }
 }
-
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
