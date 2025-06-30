@@ -3,41 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Landing page moderna para Gear5 con diseño responsivo y enfoque SEO-friendly.">
+  <meta name="description" content="Gear5">
   <title>Gear5 - Automation Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imgs/logo.svg" type="image/png" />
 </head>
 <body>
-  <header>
+<header>
+  <div class="navbar-container">
     <nav class="navbar">
       <div class="logo">
-        <a href="/"><img src="/imgs/logo.svg" alt="Logo Gear5">
+        <a href="/" style="text-decoration: none;"><img src="/imgs/logo1.svg" alt="Logo Gear5">
         <span>Gear5</span></a>
       </div>
-      <ul class="nav-links">
-        <li><a href="#producto">Producto</a></li>
-        <li><a href="#casos">Casos de uso</a></li>
-        <li><a href="#documentacion">Documentación</a></li>
-        <li><a href="#comunidad">Comunidad</a></li>
-        <li><a href="#precio">Precio</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://community.n8n.io/c/getting-started-with-n8n/docs-and-tutorials/6" target="_blank">Producto</a></li>
+        <li><a href="https://community.n8n.io/c/getting-started-with-n8n/docs-and-tutorials/6" target="_blank">Casos de uso</a></li>
+        <li><a href="https://community.n8n.io/c/getting-started-with-n8n/docs-and-tutorials/6" target="_blank">Documentación</a></li>
+        <li><a href="https://community.n8n.io/c/getting-started-with-n8n/docs-and-tutorials/6" target="_blank">Comunidad</a></li>
+        <li><a href="https://community.n8n.io/c/getting-started-with-n8n/docs-and-tutorials/6" target="_blank">Precio</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="https://github.com" target="_blank" class="icon-btn" aria-label="GitHub">
+        <a href="https://github.com/JessebR1/proyecto-gear5" target="_blank" class="icon-btn" aria-label="GitHub">
           <img src="imgs/logro1.svg" alt="">
-            <path d="M8 0C3.58 0 0 3.58 0 8a8..."/>
-          </svg>
         </a>
         <button class="btn login">Iniciar sesión</button>
         <button class="btn register">Registrarse</button>
       </div>
-      <button class="hamburger" aria-label="Menú">
+      <button class="hamburger" aria-label="Menú" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="hero">
@@ -50,8 +51,10 @@
                 <p>Crea con la precisión del código o con la velocidad de arrastrar y soltar. Hospédalo con control local o la comodidad de la nube.
                     Gear5 le ofrece más libertad para implementar agentes de IA de varios pasos e integrar aplicaciones que cualquier otra herramienta.</p>
                 <div class="hero-buttons">
-                    <button class="btn primary">Empezar gratis</button>
-                    <button class="btn secondary">Contáctanos</button>
+                    <button class="btn1">Empezar gratis</button>
+                    <button class="btn2">Contáctanos</button>
+                    <div class="modal" id="modalForm">
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,35 +134,101 @@
       </div>
     </section>
 
-    <section class="carrusel">
-      <h2>Qué dicen nuestros usuarios</h2>
-      <div class="carrusel-contenedor">
-        <!-- Aquí irá el componente shadcn react -->
+<section class="carrusel">
+  <h2>Conecte la IA a sus propios datos y</h2>
+  <h2>más de 500 integraciones</h2>
+
+  <div class="carrusel-contenedor">
+    <!-- Fila 1 -->
+    <div class="carrusel-fila fila-1">
+      <div class="carrusel-track">
+        <!-- Íconos duplicados para efecto infinito -->
+        <div class="icono"><img src="/imgs/integra1.svg" /></div>
+        <div class="icono"><img src="/imgs/integra2.svg" /></div>
+        <div class="icono"><img src="/imgs/integra3.svg" /></div>
+        <div class="icono"><img src="/imgs/integra4.svg" /></div>
+        <div class="icono"><img src="/imgs/integra5.svg" /></div>
+        <div class="icono"><img src="/imgs/integra6.svg" /></div>
+        <div class="icono"><img src="/imgs/integra7.svg" /></div>
+        <div class="icono"><img src="/imgs/integra8.svg" /></div>
+        <div class="icono"><img src="/imgs/integra9.svg" /></div>
+        <div class="icono"><img src="/imgs/integra10.svg" /></div>
+        <div class="icono"><img src="/imgs/integra11.svg" /></div>
+        <div class="icono"><img src="/imgs/integra12.svg" /></div>
+
+        <!-- Duplicados para el efecto infinito -->
+        <div class="icono"><img src="/imgs/integra1.svg" /></div>
+        <div class="icono"><img src="/imgs/integra2.svg" /></div>
+        <div class="icono"><img src="/imgs/integra3.svg" /></div>
+        <div class="icono"><img src="/imgs/integra4.svg" /></div>
+        <div class="icono"><img src="/imgs/integra5.svg" /></div>
+        <div class="icono"><img src="/imgs/integra6.svg" /></div>
+        <div class="icono"><img src="/imgs/integra7.svg" /></div>
+        <div class="icono"><img src="/imgs/integra8.svg" /></div>
+        <div class="icono"><img src="/imgs/integra9.svg" /></div>
+        <div class="icono"><img src="/imgs/integra10.svg" /></div>
+        <div class="icono"><img src="/imgs/integra11.svg" /></div>
+        <div class="icono"><img src="/imgs/integra12.svg" /></div>
       </div>
-    </section>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="carrusel-fila fila-2">
+      <div class="carrusel-track">
+        <div class="icono"><img src="/imgs/integra1.svg" /></div>
+        <div class="icono"><img src="/imgs/integra2.svg" /></div>
+        <div class="icono"><img src="/imgs/integra3.svg" /></div>
+        <div class="icono"><img src="/imgs/integra4.svg" /></div>
+        <div class="icono"><img src="/imgs/integra5.svg" /></div>
+        <div class="icono"><img src="/imgs/integra6.svg" /></div>
+        <div class="icono"><img src="/imgs/integra7.svg" /></div>
+        <div class="icono"><img src="/imgs/integra8.svg" /></div>
+        <div class="icono"><img src="/imgs/integra9.svg" /></div>
+        <div class="icono"><img src="/imgs/integra10.svg" /></div>
+        <div class="icono"><img src="/imgs/integra11.svg" /></div>
+        <div class="icono"><img src="/imgs/integra12.svg" /></div>
+
+        <!-- Duplicados para el efecto infinito -->
+        <div class="icono"><img src="/imgs/integra13.svg" /></div>
+        <div class="icono"><img src="/imgs/integra14.svg" /></div>
+        <div class="icono"><img src="/imgs/integra15.svg" /></div>
+        <div class="icono"><img src="/imgs/integra16.svg" /></div>
+        <div class="icono"><img src="/imgs/integra17.svg" /></div>
+        <div class="icono"><img src="/imgs/integra18.svg" /></div>
+        <div class="icono"><img src="/imgs/integra19.svg" /></div>
+        <div class="icono"><img src="/imgs/integra20.svg" /></div>
+        <div class="icono"><img src="/imgs/integra21.svg" /></div>
+        <div class="icono"><img src="/imgs/integra22.svg" /></div>
+        <div class="icono"><img src="/imgs/integra11.svg" /></div>
+        <div class="icono"><img src="/imgs/integra12.svg" /></div>
+      </div>
+    </div>
+    <button class="boton-carrusel">Ver todas</button>
+  </div>
+</section>
 
     <section class="grid-info">
-      <div class="info-wide">Innovación continua para tu empresa.</div>
-      <div class="info-wide">Tecnología adaptada a tus necesidades.</div>
-      <div class="info-tall">Diseñamos soluciones que escalan contigo.</div>
+        <div class="info-wide">Innovación continua para tu empresa.</div>
+        <div class="info-wide">Tecnología adaptada a tus necesidades.</div>
+        <div class="info-tall">Diseñamos soluciones que escalan contigo.</div>
     </section>
 
     <section class="tarjetas-grandes">
-      <article class="tarjeta-grande">
-        <h3>Solución integral</h3>
-        <p>Explora nuestras capacidades completas.</p>
-        <button class="btn">Más información</button>
-      </article>
-      <article class="tarjeta-grande">
-        <h3>Compatibilidad</h3>
-        <p>Funciona con tus herramientas favoritas.</p>
-        <button class="btn">Descubrir</button>
-      </article>
-      <article class="tarjeta-grande">
-        <h3>Soporte dedicado</h3>
-        <p>Siempre contigo, cuando lo necesites.</p>
-        <button class="btn">Contáctanos</button>
-      </article>
+        <article class="tarjeta-grande">
+            <h3>Solución integral</h3>
+            <p>Explora nuestras capacidades completas.</p>
+            <button class="btn-3tarjetas">Más información</button>
+        </article>
+        <article class="tarjeta-grande">
+            <h3>Compatibilidad</h3>
+            <p>Funciona con tus herramientas favoritas.</p>
+            <button class="btn-3tarjetas">Descubrir</button>
+        </article>
+        <article class="tarjeta-grande">
+            <h3>Soporte dedicado</h3>
+            <p>Siempre contigo, cuando lo necesites.</p>
+            <button class="btn-3tarjetas">Contáctanos</button>
+        </article>
     </section>
 
     <section class="espacio-react">
@@ -167,60 +236,83 @@
       <div id="react-carousel"></div>
     </section>
 
-    <section class="tarjeta-boton">
-      <article class="pres-panel">
-        <section class="mini-presentacion">
-      <div class="tarjeta-pres">
-        <img src="icon2.svg" alt="Icono 2">
-        <div>
-          <h3>Dev Ops:</h3>
-          <p>Convierte lenguaje natural en llamdas a la API.</p>
+<div class="section-3tarjetas">
+    <div class="card-container-3tarjetas">
+        <div class="card largo">
+            <h3>Crear agentes de varios pasos que<br>invoquen herramientas personalizadass</h3>
+            <p>Crea sistemas de agentes en una sola pantalla. Integra cualquier LLM en tus flujos de trabajo con solo
+                arrastrar y soltar.</p>
+            <button class="btn-3tarjetas">Explora AI →</button>
         </div>
-      </div>
-      <div class="tarjeta-pres">
-        <img src="icon1.svg" alt="Icono 1">
-        <div>
-          <h3>Seguridad:</h3>
-          <p>Mejora tickets de incidentes de seguridad.</p>
+
+        <div class="card pequeño">
+            <h3>Chatea con tus propios datos</h3>
+            <p>Utilice Slack, Teams, SMS, voz o nuestra interfaz de chat incorporada para obtener respuestas precisas a
+                partir de sus datos, crear tareas y completar flujos de trabajo.</p>
+            <div class="chat-bubble">¿Quién mantuvo reuniones con SpaceX la semana pasada?</div>
+            <div class="chat-bubble">El miércoles, Joe actualizó el estado a "ganado" en Salesforce después de una llamada de Zoom.
+            </div>
+            <div class="chat-bubble">El jueves, Sue proporcionó la instalación en el sitio y cerró el ticket de ServiceNow.</div>
+            <div class="chat-bubble">Crear una tarea en Asana...</div>
         </div>
-      </div>
-      <div class="tarjeta-pres">
-        <img src="icon3.svg" alt="Icono 3">
-        <div>
-          <h3>Ventas:</h3>
-          <p>Genera información sobre nuevos clientes.</p>
+
+        <div class="card largo">
+            <h3>Hospédelo todo usted mismo,<br>incluidos los modelos de IA.</h3>
+            <p>Proteja sus datos mediante la implementación local.</p>
+            <ul>
+                <li>Implementar con Docker</li>
+                <li>Acceda al código fuente completo en Github</li>
+                <li>Versión alojada también disponible</li>
+            </ul>
         </div>
-      </div>
-      <div class="tarjeta-pres">
-        <img src="icon3.svg" alt="Icono 3">
-        <div>
-          <h3>Tú puedes:</h3>
-          <p>Automatizar procesos de carga masiva de datos.</p>
-        </div>
-      </div>
-    </section>
-        <div class="presentacion-imagen">
-          <img src="imgs/presentacion.PNG" alt="presentacion" width="1000px">
-        </div>
-      </article>
-    </section>
+    </div>
+</div>
+
   </main>
 
-  <footer>
-    <div class="footer-links">
+<footer>
+  <div class="footer-container">
+    <!-- Columna 1: Logo y descripción -->
+    <div class="footer-col footer-brand">
+      <a href="/" style="text-decoration: none;"><img src="/imgs/logo.svg" width="70px" alt="Logo Gear5">
+        <h2 style="color: rgb(207, 207, 207);">Gear5</h2>
+      <p>Conectamos IA con tus procesos para llevar tu negocio al siguiente nivel.</p></a>
+    </div>
+
+    <!-- Columna 2: Enlaces -->
+    <div class="footer-col footer-links">
+      <h4>Enlaces</h4>
       <nav>
-        <a href="#">Inicio</a>
+        <a href="/">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Integraciones</a>
+        <a href="#">Planes</a>
+        <a href="#">FAQs</a>
         <a href="#">Términos</a>
         <a href="#">Privacidad</a>
         <a href="#">Contacto</a>
       </nav>
     </div>
-    <div class="footer-social">
-      <a href="#"><img src="facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="twitter.svg" alt="Twitter"></a>
-      <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+
+    <!-- Columna 3: Redes sociales -->
+    <div class="footer-col footer-social">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="imgs/fb.svg" alt="Facebook" /></a>
+        <a href="https://x.com/?lang=es"><img src="imgs/x.svg" alt="Twitter" /></a>
+        <a href="https://www.linkedin.com/"><img src="imgs/in.svg" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/"><img src="imgs/insta.svg" alt="Instagram" /></a>
+        <a href="https://www.youtube.com/"><img src="imgs/yt.svg" alt="YouTube" /></a>
+        <a href="https://github.com/"><img src="imgs/github.svg" alt="GitHub" /></a>
+      </div>
     </div>
-  </footer>
+  </div>
+
+  <div class="footer-copy">
+    © 2025 Gear5 — Todos los derechos reservados.
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
