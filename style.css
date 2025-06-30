@@ -70,7 +70,7 @@ button {
   border: 1px solid #fff;
 }
 
-/* === Navbar === */
+/*  navbar  */
 .navbar-container {
   width: 100%;
   position: fixed;
@@ -202,7 +202,7 @@ button {
 }
 
 
-/* === Hero === */
+/*  Hero  */
 .hero {
   position: relative;
   padding: 5em 2em;
@@ -318,7 +318,7 @@ button {
     border: 3px solid rgb(136, 136, 136);
 }
 
-/* === Marcas === */
+/*  Marcas  */
 .marcas {
   padding: 3em 2em;
   text-align: center;
@@ -340,7 +340,7 @@ button {
   margin-top: 40px;
 }
 
-/* === Mini Tarjetas === */
+/* mini tarjetas */
 .logros {
   display: flex;
   justify-content: center;
@@ -368,14 +368,14 @@ button {
   height: 48px;
 }
 
-/* === Carrusel === */
+/* Carrusel  */
 .carrusel {
   padding: 3em 2em;
   text-align: center;
   background-color: #112031;
 }
 
-/* === Grid Info === */
+/* Grid info */
 .grid-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -389,7 +389,7 @@ button {
   border-radius: 8px;
 }
 
-/* === Tarjetas Grandes === */
+/*  tarjetas grandes */
 .tarjetas-grandes {
   display: flex;
   gap: 2em;
@@ -406,13 +406,13 @@ button {
   max-width: 300px;
 }
 
-/* === Espacio React === */
+/*  Espacio React  */
 .espacio-react {
   padding: 4em 2em;
   background: #1e293b;
 }
 
-/* === Tarjetas Grandes === */
+/*  Tarjetas Grandes  */
 .tarjetas-grandes {
   display: flex;
   gap: 2em;
@@ -475,7 +475,7 @@ button {
   display: flex;
   gap: 16px;
   flex-wrap: nowrap;
-  min-width: 200%; /* el doble para permitir scroll infinito */
+  min-width: 200%;
   will-change: transform;
 }
 
@@ -607,7 +607,7 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px; /* <- antes era 1200px */
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -685,7 +685,6 @@ footer {
   color: #8a97aa;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -702,8 +701,6 @@ footer {
   }
 }
 
-
-/* === Media Queries === */
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
